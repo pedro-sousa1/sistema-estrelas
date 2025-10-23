@@ -34,7 +34,7 @@ def estrelas_hoje(usuario):
 # ---------------- INTERFACE STREAMLIT ----------------
 
 st.title("🌠 DALL-E-STAR 🌠")
-st.markdown("### ⭐ Sistema de Estrelas Turbinado - Versão Web")
+st.markdown("### ⭐ daily star ")
 
 # Login simples
 usuario_logado = st.radio("Quem está usando o sistema?", ["Senhor Pedro", "Dona Isabela"])
