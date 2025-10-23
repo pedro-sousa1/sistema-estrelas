@@ -7,7 +7,7 @@ from datetime import datetime
 ARQUIVO = "daily_star.json"
 
 # Categorias e emojis
-CATEGORIAS = ["Estudar", "Treinar", "Alimentação", "Momento com Devoção", "Outro"]
+CATEGORIAS = ["Estudar", "Treinar", "Alimentação", "Momento Devocional", "Outro"]
 EMOJIS = ["🌟", "💫", "✨", "⭐"]
 
 # Cria arquivo se não existir
