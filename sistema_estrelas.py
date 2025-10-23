@@ -33,7 +33,7 @@ def estrelas_hoje(usuario):
 
 # ---------------- INTERFACE STREAMLIT ----------------
 
-st.title("🌠 DALL-E-STAR 🌠")
+st.title("🌠 DAILY-STAR 🌠")
 st.markdown("### ⭐ daily star ")
 
 # Login simples
