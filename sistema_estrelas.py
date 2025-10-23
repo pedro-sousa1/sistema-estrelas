@@ -63,6 +63,31 @@ if st.button("Marcar Estrela ⭐"):
     salvar()
     st.success(f"Estrela marcada com sucesso em {categoria} {emoji}!")
 
+# ---------------- REMOVER ESTRELA ----------------
+st.markdown("---")
+st.subheader("❌ Remover Estrela Marcada")
+
+# Mostrar apenas se houver estrelas
+if estrelas[usuario]:
+    datas_disponiveis = list(estrelas[usuario].keys())
+    data_escolhida = st.selectbox("Escolha o dia:", datas_disponiveis)
+
+    if data_escolhida:
+        estrelas_dia = estrelas[usuario][data_escolhida]
+        estrela_escolhida = st.selectbox("Escolha a estrela para apagar:", estrelas_dia)
+
+        if st.button("Apagar Estrela 🗑️"):
+            estrelas[usuario][data_escolhida].remove(estrela_escolhida)
+
+            # Se o dia ficar vazio, remove o dia do dicionário
+            if not estrelas[usuario][data_escolhida]:
+                del estrelas[usuario][data_escolhida]
+
+            salvar()
+            st.success(f"Estrela '{estrela_escolhida}' removida com sucesso!")
+else:
+    st.info("Nenhuma estrela registrada ainda para remover.")
+
 # ---------------- HISTÓRICO ----------------
 st.markdown("---")
 st.subheader("📜 Histórico de Estrelas")
